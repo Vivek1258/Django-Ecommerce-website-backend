@@ -1,0 +1,98 @@
+{
+	"register_buyer":
+	{
+        "body":
+                {
+
+                "username" : "Buyer1258" , 
+                "first_name" : "Bye" ,
+                "last_name" : "yar",
+                "email" : "bye.yar18@gmail.com",
+                "password" : "Buyer@1258",
+                "mobile_number" : 1000000000 ,
+                "img_link" : "https://sample.com" ,
+
+                "lane_no" : "3" ,
+                "landmark" : "Easy Death Hospital",
+                "village" : "sample village",
+                "district" : "sample district",
+                "state" : "sample state",
+
+                "pro_user" : false
+            	}
+    },
+
+    "register_seller":
+    {
+        "body":
+            {
+            "username" : "Seller1258" , 
+            "first_name" : "Sel" ,
+            "last_name" : "ler",
+            "email" : "sel.ler18@gmail.com",
+            "password" : "Seller@1258",
+            "mobile_number" : 1000000000 ,
+            "img_link" : "https://sample.com" ,
+
+            "lane_no" : "3" ,
+            "landmark" : "Easy Death Hospital",
+            "village" : "sample village",
+            "district" : "sample district",
+            "state" : "sample state",
+
+            "shop_type": "Electronics Goods",
+            "official_doc_link" : "https://sample.com"
+            }
+    },
+
+	"login" :
+	{
+        "body":
+            {
+    		"username" : "Vivek1258",
+    		"password" : "Vivek@1258"
+            }
+
+	},
+
+    "add_item":{
+
+        "header":
+            {
+                "Authorization" : "Token ######################################"
+            },
+        "body" :
+            {
+
+            "item_name": "When I met your Mother",
+            "item_type": "Book",
+            "item_sub_type": "Story",
+            "seller": "Raj Sellers",
+            "seller_email" : "raja@shop.com",
+            "seller_mobile" : 12345678910 ,
+            "rating" : 2 ,
+            "availability": true,
+            "stock" : 20 ,
+            "price": 540, 
+            "image_link": "https://www.sampleurl.com",
+            "description": "some text",
+            "specifiation": "some text"
+
+            }
+    },
+
+    "place_order" :
+    {
+            "header":
+            {
+                "Authorization" : "Token ######################################"
+            },
+
+            "body" :
+            {
+                "order_sat" : "Placed",
+                "item_id" : 1,
+            }
+
+    },
+}
