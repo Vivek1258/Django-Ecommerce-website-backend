@@ -14,6 +14,7 @@ This Project includes developement of backend with RESTfull services for an E co
 - [Contributing](#contributing)
 - [License](#license)
 - [Get Help](#get-help)
+- [Contact](#contact)
 - [Motivation](#motivation) 
 
 ## Getting Started 
@@ -442,15 +443,15 @@ Pull requests are always welcome, and we will do our best to do reviews as fast 
 
 ## License
 
-This project is licensed under the [Apache License](!https://github.com/Vivek1258/Django-Ecommerce-website-backend/blob/main/LICENSE)
+This project is licensed under the [Apache License](https://github.com/Vivek1258/Django-Ecommerce-website-backend/blob/main/LICENSE)
 
 ## Get Help
 
-- If appropriate, [open an issue](!https://github.com/Vivek1258/Django-Ecommerce-website-backend/issues) on GitHub
+- If appropriate, [open an issue](https://github.com/Vivek1258/Django-Ecommerce-website-backend/issues) on GitHub
 
 ## Contact 
 
-- Contact me on [LinkedIn](!https://www.linkedin.com/in/vivek-mankar-182735184/) 
+- Contact me on [LinkedIn](https://www.linkedin.com/in/vivek-mankar-182735184/) 
 - Email mankarvivek172000@gmail.com
 
 ## Motivation
