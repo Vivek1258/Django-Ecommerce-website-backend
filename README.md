@@ -9,7 +9,7 @@ This Project includes developement of backend with RESTfull services for an E co
 ## Table of content
 
 - [**Getting Started**](#getting-started)
-- [API overview ](#api-overview)
+- [API overview ](#API-endpoints)
 - [Built With](#built-with)
 - [Contributing](#contributing)
 - [License](#license)
