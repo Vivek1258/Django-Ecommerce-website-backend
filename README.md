@@ -23,42 +23,7 @@ This Project includes developement of backend with RESTfull services for an E co
 
 You can use the API(s) 
 
-### API endpoints
-
-#### Buyer Login
-
-
-Using the URL 
-
-``` 
-https://aoc001-intellisearch.herokuapp.com/iSearch/{input_data}
-```
-
-this can be done with python Request 
-
-```
-import requests
-
-data = {
-        "search_text": "Biden",
-        "url": "https://www.nbcnews.com/",
-        "context": "",
-        "data_format": "json",
-        "case_match": True,
-        "base_match": True,
-        "lemmatized_match": True,
-        "context_match": False
-       }
-
-response = requests.post( "https://aoc001-intellisearch.herokuapp.com/iSearch/" , json = data)
-
-print(response.text)
-```
-
-
-OR install the setup on your local machine 
- 
-### Install ( for Ubuntu based Linux distribution )
+### Install ( for Windows OS  )
 
 #### Clone the repo
 
@@ -67,8 +32,11 @@ $ git clone https://github.com/aivatanproducts/aoc001-intelliSearch.git
 ```
 
 #### Create the virtualenv
+( using python virtualenv )
+
 ```bash
-$ mkvirtualenv intellisearch
+$ virtualenv env
+$ cd Django-Ecommerce-website-backend
 ```
 
 #### Install dependencies
@@ -78,169 +46,391 @@ $ pip install -r requirements.txt
 
 ### Run the API on localhost
 ```bash
-$ python3 api.py
- * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
- * Restarting with inotify reloader
-
+$ python manage.py runserver
 ```
 
 
-## API overview
 
-The API is  RESTFUL and returns the output in the JSON or XML format 
+### API endpoints
 
-You can directly call API using Python  (or any  other programming language ) 
+###### Since we are using token based authentication, after login,api will return a unique token. 
+###### This token will be used to excess all the information about the user by the front end. 
 
-### API inputs :
+
+### Buyer Operations 
+
+#### Register Buyer 
+
+##### method : POST
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/register_buyer/
+```
+
+Example JSON body : 
+
+Here username, email, and password are only required fields other information can be updated in the buyer profile 
 
 ```
 {
-  "search_text": "string",
-  "url": "string",
-  "context": "string",
-  "data_format": "string",
-  "case_match": true,
-  "base_match": false,
-  "lemmatized_match": false,
-  "context_match": false
+        "username" : "Buyer1258" , 
+        "email" : "bye.yar18@gmail.com",
+        "password" : "Buyer@1258",
+
+
+        "first_name" : "Bye" ,
+        "last_name" : "yar",
+        "mobile_number" : 1000000000 ,
+        "img_link" : "https://sample.com" ,
+
+
+        "lane_no" : "3" ,
+        "landmark" : "Easy Death Hospital",
+        "village" : "sample village",
+        "district" : "sample district",
+        "state" : "sample state",
+
+        "pro_user" : false
 }
 ```
 
+#### Get Buyer Profile
+
+##### method :  GET
 
 
+The URL 
 
-
- search_text: string,
-              key Word for searching 
-              
- url	:        string,
-              Url of the site to be searched and extracted. If left blank our default list of sites will be scrapped,
-              default: https://www.bbc.com/news
-        
- context :    string,
-              Context string helps us get more relevant data,
-
- data_format :string,
-              Format of the data returned,
-              default: Json,
-              Available: Json and xml
-               
- case_match	: boolean,
-              For searching through case match,
-              default: true
-  
- base_match	: boolean,
-              For searching through the base match,
-              default: false
-             
- lemmatized_match	: boolean,
-              For searching through lemmatized match,
-              default: false
-  
- context_match	: boolean,
-              involvels context searching,
-              default: false
-              
-              
-### API Outputs/Returns  :
-
-  API returns the scraped data in the provided format
-  
-  Example Json Output
-  
+``` 
+http://127.0.0.1:8000/users/api/buyer-profile/
 ```
-  {
-  "status": "OK",
-  "statusCode": 200,
-  "inputs": {
-    "searchtext": "Bidenzcxfghjkl",
-    "url": "https://www.nbcnews.com/",
-    "context": "",
-    "data_format": "json",
-    "case_match": true,
-    "base_match": true,
-    "lemmatized_match": true,
-    "context_match": false
-  },
-  "output": {
-    "case_match": {
-      "p": [],
-      "li": [],
-      "h1": [],
-      "h2": [],
-      "h3": [],
-      "h4": [],
-      "td": [],
-      "em": [],
-      "a": [],
-      "div": [],
-      "span": []
-    },
-    "base_match": {
-      "p": [],
-      "li": [],
-      "h1": [],
-      "h2": [],
-      "h3": [],
-      "h4": [],
-      "td": [],
-      "em": [],
-      "a": [],
-      "div": [],
-      "span": []
-    },
-    "lemmatized_match": {
-      "p": [],
-      "li": [],
-      "h1": [],
-      "h2": [],
-      "h3": [],
-      "h4": [],
-      "td": [],
-      "em": [],
-      "a": [],
-      "div": [],
-      "span": []
-    }
-  },
-  "Context-matched": {},
-  "Entities:": {}
+
+Header should contain Authorization key with value as Token  :
+
+```
+"Authorization" : "Token ###############################################"
+```
+
+
+#### Update Buyer Profile
+
+##### method : PUT
+
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/update-buyer-profile/
+```
+
+Header should contain Authorization key with value as Token  :
+
+```
+"Authorization" : "Token ###############################################"
+```
+
+JSON Body :
+
+```
+{
+        "mobile_number" : 1000000000 ,
+        "img_link" : "https://sample.com" ,
+
+        "lane_no" : "3" ,
+        "landmark" : "Easy Death Hospital",
+        "village" : "sample village",
+        "district" : "sample district",
+        "state" : "sample state"
+ }
+
+
+```
+
+
+#### Place Order 
+
+##### method : POST
+
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/place_order/
+```
+
+Header should contain Authorization key with value as Token  :
+
+```
+"Authorization" : "Token ###############################################"
+```
+
+JSON Body :
+
+```
+{
+        "order_sat" : "Placed",
+        "item_id" : 1
 }
 
 ```
-  
-  
-  
+
+
+
+#### Get list of Order placed 
+
+##### method : GET
+
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/place_order/
+```
+
+Header should contain Authorization key with value as Token  :
+
+```
+"Authorization" : "Token ###############################################"
+```
+ 
+
+
+
+### Seller Operations
+
+
+#### Register Seller
+
+##### method : POST
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/register_seller/
+```
+
+Example JSON body : 
+
+Here, All the information are required fields sinse we are registering a seller 
+
+```
+{
+        "username" : "Seller1258" , 
+        "first_name" : "Sel" ,
+        "last_name" : "ler",
+        "email" : "sel.ler18@gmail.com",
+        "password" : "Seller@1258",
+        "mobile_number" : 1000000000 ,
+        "img_link" : "https://sample.com" ,
+
+        "lane_no" : "3" ,
+        "landmark" : "Easy Death Hospital",
+        "village" : "sample village",
+        "district" : "sample district",
+        "state" : "sample state",
+
+        "shop_type": "Electronics Goods",
+        "official_doc_link" : "https://sample.com"
+ }
+```
+
+
+#### Get Seller Profile
+
+##### method :  GET
+
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/seller-profile/
+```
+
+Header should contain Authorization key with value as Token  :
+
+```
+"Authorization" : "Token ###############################################"
+```
+
+
+
+#### Update Seller Profile
+
+##### method : PUT
+
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/update-seller-profile/
+```
+
+Header should contain Authorization key with value as Token  :
+
+```
+"Authorization" : "Token ###############################################"
+```
+
+JSON Body :
+
+```
+{
+        "mobile_number" : 1000000000 ,
+        "img_link" : "https://sample.com" ,
+
+        "lane_no" : "3" ,
+        "landmark" : "Easy Death Hospital",
+        "village" : "sample village",
+        "district" : "sample district",
+        "state" : "sample state",
+
+        "shop_type": "Electronics Goods",
+        "official_doc_link" : "https://sample.com"
+}
+
+
+```
+
+
+#### Post an Item 
+
+##### method : POST
+
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/add_product/
+```
+
+Header should contain Authorization key with value as Token  :
+
+```
+"Authorization" : "Token ###############################################"
+```
+
+JSON Body :
+
+```
+{
+
+            "item_name": "When I met your Mother",
+            "item_type": "Book",
+            "item_sub_type": "Story",
+            "seller": "Raj Sellers",
+            "seller_email" : "raja@shop.com",
+            "seller_mobile" : 12345678910 ,
+            "rating" : 2 ,
+            "availability": true,
+            "stock" : 20 ,
+            "price": 540, 
+            "image_link": "https://www.sampleurl.com",
+            "description": "some text",
+            "specifiation": "some text"
+
+}
+
+```
+#### Get list of Uploaded Items  
+
+##### method : GET
+
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/get_products/
+```
+
+Header should contain Authorization key with value as Token  :
+
+```
+"Authorization" : "Token ###############################################"
+```
+ 
+ 
+ 
+ ### Login/Logout/Update Password
+ 
+ 
+#### User(Buyer/Seller) Login 
+
+##### method : POST
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/login/
+```
+
+Example JSON body : 
+
+```
+{
+        "username" : "Seller1258" , 
+        "password" : "Seller@1258"
+ }
+```
+
+ 
+
+#### User(Buyer/Seller) Update Password 
+
+##### method : POST
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/login/
+```
+
+
+Header should contain Authorization key with value as Token  :
+
+```
+"Authorization" : "Token ###############################################"
+```
+ 
+ 
+Example JSON body : 
+
+```
+{
+        "old_password" : "Seller1258" , 
+        "new_password" : "Seller@1258"
+ }
+```
+
+
+#### User(Buyer/Seller) Logout
+
+##### method : POST
+
+The URL 
+
+``` 
+http://127.0.0.1:8000/users/api/logout/
+```
+
+Header should contain Authorization key with value as Token  :
+
+```
+"Authorization" : "Token ###############################################"
+```
+
+
+ 
 ## Built With
 
 Python
 
-flask
+Django ( For Backend )
 
-NLP
+Django Rest Framework ( for RESTfull services )
 
-
-## Features
-
-
-Api provides the following featured framework
-- Natural Language Processing(NLP) and Understanding(NLU) - Relevance in matching content
-- Named entity recognition(NER) functions - To identify related entities
-- web scrapping techniques to extract that relevant data
-- post-processing data - packaging and format marshaling
-
-
-## Flow Diagram
-
-
-<img src="https://github.com/aivatanproducts/aoc001-intelliSearch/blob/master/Images/intelliSearchFlow.png" alt="drawing" width="500" hight = "1000"/>
-
-
-## SandBox
-
-Please feel free to play with the API in our sandbox 
-
-sandbox link: https://aoc001-intellisearch.herokuapp.com/
+Django Rest Knox ( For User Authentication )
 
 
 ## Contributing
@@ -255,16 +445,25 @@ Pull requests are always welcome, and we will do our best to do reviews as fast 
 
 ## License
 
-This project is licensed under the [GPL License](https://github.com/aivatanproducts/aoc001-intelliSearch/blob/master/LICENSE)
-
+This project is licensed under the [Apache License]()
 
 ## Get Help
-- Contact us on admin@aivatan.cf
-- If appropriate, [open an issue](https://github.com/aivatanproducts/aoc001-intelliSearch/issues) on GitHub
+
+- If appropriate, [open an issue]() on GitHub
+
+## Contact 
+
+- Contact me on [LinkedIn]() 
+- Email mankarvivek172000@gmail.com
 
 ## Motivation
-longing to learn and use the cutting edge machine learning technologies 
-drives us to build and optimize the modern search techniques.
+
+I am a Machine Learning Practitioner. In the path of becoming a Machine Learning Engineer 
+
+I intend to learn Web development to get a Complete understanding of how web applications work.
+ 
+
+
 
 
 
