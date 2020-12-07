@@ -1,4 +1,4 @@
-# Ecommerce-backend-with-django-and-mongodb
+# Django-Ecommerce-website-backend__ V 1.0
 
 ![Github License](https://img.shields.io/aur/license/android-studio)
 ![Code Coverage](https://img.shields.io/badge/coverage-80%25-green)
@@ -11,9 +11,6 @@ This Project includes developement of backend with RESTfull services for an E co
 - [**Getting Started**](#getting-started)
 - [API overview ](#api-overview)
 - [Built With](#built-with)
-- [Features](#features)
-- [Flow Diagram](#flow-diagram)
-- [SandBox](#sandbox)
 - [Contributing](#contributing)
 - [License](#license)
 - [Get Help](#get-help)
@@ -28,7 +25,7 @@ You can use the API(s)
 #### Clone the repo
 
 ```bash
-$ git clone https://github.com/aivatanproducts/aoc001-intelliSearch.git
+$ git clone https://github.com/Vivek1258/Django-Ecommerce-website-backend.git
 ```
 
 #### Create the virtualenv
@@ -445,15 +442,15 @@ Pull requests are always welcome, and we will do our best to do reviews as fast 
 
 ## License
 
-This project is licensed under the [Apache License]()
+This project is licensed under the [Apache License](!https://github.com/Vivek1258/Django-Ecommerce-website-backend/blob/main/LICENSE)
 
 ## Get Help
 
-- If appropriate, [open an issue]() on GitHub
+- If appropriate, [open an issue](!https://github.com/Vivek1258/Django-Ecommerce-website-backend/issues) on GitHub
 
 ## Contact 
 
-- Contact me on [LinkedIn]() 
+- Contact me on [LinkedIn](!https://www.linkedin.com/in/vivek-mankar-182735184/) 
 - Email mankarvivek172000@gmail.com
 
 ## Motivation
