@@ -10,6 +10,10 @@ This Project includes developement of backend with RESTfull services for an E co
 
 - [**Getting Started**](#getting-started)
 - [API overview ](#API-endpoints)
+- [Buyer Operations](#Buyer-Operations)
+- [Seller Operations] (#Seller-Operations)
+- [Login, Logout, Update Password] (#Login/Logout/Update-Password )
+- [EER Diagram ] (#EER Diagram)
 - [Built With](#built-with)
 - [Contributing](#contributing)
 - [License](#license)
@@ -46,6 +50,7 @@ $ pip install -r requirements.txt
 ```bash
 $ python manage.py runserver
 ```
+
 
 
 
@@ -417,6 +422,12 @@ Header should contain Authorization key with value as Token  :
 ```
 "Authorization" : "Token ###############################################"
 ```
+
+
+
+### EER Diagram
+
+![](Images/EER.PNG)
 
 
  
