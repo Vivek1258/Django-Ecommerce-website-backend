@@ -1,4 +1,4 @@
-# Django-Ecommerce-website-backend__ V 1.0
+# Django-Ecommerce-website-backend__ V 1.1
 
 ![Github License](https://img.shields.io/aur/license/android-studio)
 ![Code Coverage](https://img.shields.io/badge/coverage-80%25-green)
