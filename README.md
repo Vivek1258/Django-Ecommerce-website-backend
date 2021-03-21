@@ -6,6 +6,7 @@
 
 This Project includes developement of backend with RESTfull services for an E commerce website [Spareware.com](https://spareware.herokuapp.com/), Where users can login as a buyer or a seller and the whole Login process is secured with token based authentication system. Sellers can post their products and Buyers can place orders. This simple project is developed to get hands-on practice with some core Computer Science and programming  topics i.e. DBMS, DSA, OOP and clean coding practices.
 
+
 ## Table of content
 
 - [**Getting Started**](#getting-started)
@@ -50,8 +51,6 @@ $ pip install -r requirements.txt
 ```bash
 $ python manage.py runserver
 ```
-
-
 
 
 ### API endpoints
