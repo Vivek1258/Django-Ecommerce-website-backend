@@ -14,7 +14,7 @@ This Project includes developement of backend with RESTfull services for an E co
 - [Buyer Operations](#Buyer-Operations)
 - [Seller Operations](#Seller-Operations)
 - [Login, Logout, Update Password](#Login/Logout/Update-Password ) 
-- [EER Diagram ](#EER-Diagram)
+<!-- - [EER Diagram ](#EER-Diagram) -->
 - [Built With](#built-with)
 - [Contributing](#contributing)
 - [License](#license)
@@ -423,10 +423,10 @@ Header should contain Authorization key with value as Token  :
 ```
 
 
+<!--
+### EER Diagram ![](Images/EER.PNG)
 
-### EER Diagram
-
-![](Images/EER.PNG)
+-->
 
 
  
