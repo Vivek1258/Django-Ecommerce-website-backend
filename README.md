@@ -13,8 +13,7 @@ This Project includes developement of backend with RESTfull services for an E co
 - [API overview ](#API-endpoints)
 - [Buyer Operations](#Buyer-Operations)
 - [Seller Operations](#Seller-Operations)
-- [Login, Logout, Update Password](#Login/Logout/Update-Password ) 
-<!-- - [EER Diagram ](#EER-Diagram) -->
+- [Login, Logout, Update Password](#Login/Logout/Update-Password ) <!-- - [EER Diagram ](#EER-Diagram) -->
 - [Built With](#built-with)
 - [Contributing](#contributing)
 - [License](#license)
