@@ -14,17 +14,17 @@ This Project includes developement of backend with RESTfull services for an E co
 - [Buyer Operations](#Buyer-Operations)
 - [Seller Operations](#Seller-Operations)
 - [Login, Logout, Update Password](#Login/Logout/Update-Password ) 
-- [Schema Diagram ](#EER-Diagram) 
+<!-- - [Schema Diagram ](#EER-Diagram) -->
 - [Built With](#built-with)
 - [Contributing](#contributing)
 - [License](#license)
 - [Get Help](#get-help)
 - [Contact](#contact)
-- [Motivation](#motivation) 
+<!-- - [Motivation](#motivation) --> 
 
 ## Getting Started 
 
-You can use the API(s) 
+<!-- You can use the API(s) -->
 
 ### Install ( for Windows OS  )
 
@@ -424,7 +424,7 @@ Header should contain Authorization key with value as Token  :
 
 
 
-### EER Diagram ![](Images/EER.PNG)
+<!-- ### EER Diagram ![](Images/EER.PNG) -->
 
 
 
@@ -464,11 +464,11 @@ This project is licensed under the [Apache License](https://github.com/Vivek1258
 - Contact me on [LinkedIn](https://www.linkedin.com/in/vivek-mankar-182735184/) 
 - Email mankarvivek172000@gmail.com
 
-## Motivation
+<!-- ## Motivation
 
 I am a Machine Learning Practitioner. In the path of becoming a Machine Learning Engineer 
 
-I intend to learn Web development to get a Complete understanding of how web applications work.
+I intend to learn Web development to get a Complete understanding of how web applications work. -->
  
 
 
