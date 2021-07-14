@@ -188,7 +188,7 @@ JSON Body :
 The URL 
 
 ``` 
-http://127.0.0.1:8000/users/api/place_order/
+http://127.0.0.1:8000/users/api/get_orders/
 ```
 
 Header should contain Authorization key with value as Token  :
